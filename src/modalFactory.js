@@ -11,6 +11,7 @@ module.exports = function(animation){
             keyboard: React.PropTypes.bool,
             onShow: React.PropTypes.func,
             onHide: React.PropTypes.func,
+            onBackdropClick: React.PropTypes.func,
             animation: React.PropTypes.object,
             backdrop: React.PropTypes.bool,
             closeOnClick: React.PropTypes.bool,
@@ -24,6 +25,7 @@ module.exports = function(animation){
                 className: "",
                 onShow: function(){},
                 onHide: function(){},
+                onBackdropClick: function(){},
                 animation: animation,
                 keyboard: true,
                 backdrop: true,
@@ -62,8 +64,8 @@ module.exports = function(animation){
             if (this.props.closeOnClick) {
                 this.hide("backdrop");
             }
-            if (this.props.handleBackdropClick) {
-                this.props.handleBackdropClick();
+            if (this.props.onBackdropClick) {
+                this.props.onBackdropClick();
             }
         },
 
