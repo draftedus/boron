@@ -62,6 +62,9 @@ module.exports = function(animation){
             if (this.props.closeOnClick) {
                 this.hide("backdrop");
             }
+            if (this.props.handleBackdropClick) {
+                this.props.handleBackdropClick();
+            }
         },
 
         render: function() {
@@ -99,7 +102,7 @@ module.exports = function(animation){
                 }
             }
 
-            var backdrop = this.props.backdrop? <div style={backdropStyle} onClick={this.props.closeOnClick? this.handleBackdropClick: null} />: undefined;
+            var backdrop = this.props.backdrop? <div style={backdropStyle} onClick={this.handleBackdropClick} />: undefined;
 
             if(willHidden) {
                 var node = this.refs[ref];
