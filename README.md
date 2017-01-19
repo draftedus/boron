@@ -74,6 +74,7 @@ var Example = React.createClass({
  * keyboard - keyboard (escape key) is the cause of the hide
  * backdrop - backdrop click is the cause of the hide
  * [any] - custom argument passed by invoking code into the hide() method when called directly.
+* onBackdropClick - Called whenever the backdrop is clicked (passes the event as first argument)
 * modalStyle - CSS styles to apply to the modal
 * backdropStyle - CSS styles to apply to the backdrop
 * contentStyle - CSS styles to apply to the modal's content

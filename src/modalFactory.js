@@ -60,12 +60,12 @@ module.exports = function(animation){
             }
         },
 
-        handleBackdropClick: function() {
+        handleBackdropClick: function(e) {
             if (this.props.closeOnClick) {
                 this.hide("backdrop");
             }
             if (this.props.onBackdropClick) {
-                this.props.onBackdropClick();
+                this.props.onBackdropClick(e);
             }
         },
 
